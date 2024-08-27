@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Images Bucket upload</title>
+      <link rel="stylesheet" href="/styles.css">
+    </head>
+    <body>
+        <div class="topnav">
+          <!-- Centered link -->
+          <div class="logo-left">
+            <img src="../Cloudflare-White.png" alt="Cloudflare Logo">
+          </div>
+          <div class="topnav-centered">
+            <a href="/" class="active">Home</a>  
+          </div>
+          <!-- Right-aligned links -->
+          <div class="topnav-right">
+            <a href="/images" class="topnav-right">Images</a>
+            <a href="#search" class="topnav-right">Search</a>
+            <a href="#about" class="topnav-right">About</a>
+          </div> 
+        </div>
+        <!-- adding the ability to upload a file-->  
+        <P></P>
+        <p></p>
+        <form method="POST" action="/images/upload" enctype="multipart/form-data">
+          <input type="file" id="myFile" name="filename"/>
+          <button type="submit">Upload</button>
+        </form>
+        <hr class="solid">
+        <h1>Here is the list of files currently in R2 Bucket</h1>
+        <ul id="image-list">
+            {{imagesList}}
+        </ul>
+        <p></p>
+        <hr class="solid">
+        <h2>Delete a file</h2>
+        <form method="POST" action="/images/delete">
+          <select name="image">
+            {{imageOptions}}
+          </select>
+          <button type="submit">Delete</button>
+        </form>
+
+    </body>
+</html>

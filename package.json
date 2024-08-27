@@ -1,0 +1,19 @@
+{
+  "name": "simpleposttor2-hono-app",
+  "scripts": {
+    "dev": "wrangler dev",
+    "db.generate": "drizzle-kit generate:sqllite",
+    "db:up": "drizzle-kit up:sqllite",
+    "deploy": "wrangler deploy --minify",
+    "cf-typegen": "wrangler types --env-interface CloudflareBindings"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.33.0",
+    "esbuild": "^0.23.1",
+    "hono": "^4.5.5"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240806.0",
+    "wrangler": "^3.57.2"
+  }
+}
