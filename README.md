@@ -1,2 +1,12 @@
-# ramosj9-simpleposttor2-hono-app
-New worker repo for cloudflare worker demo
+
+Cloudflare worker for client demo
+Version 0.0.1
+
+```
+npm install
+npm run dev
+```
+
+```
+npm run deploy
+```
